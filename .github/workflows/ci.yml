@@ -12,7 +12,15 @@ jobs:
       - name: Checkout pipeline repo
         uses: actions/checkout@v4
 
-      - name: Run pipeline logic
+      - name: Checkout coderepo
+        uses: actions/checkout@v4
+        with:
+          repository: sschlosser7/repo-A
+          ref: main                   
+          path: coderepo                    
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  
+
+      - name: Run sample.py
         run: |
-          echo "Pipeline started from Repo A"
-          # Your build steps here
+          cd coderepo
+          python sample.py
