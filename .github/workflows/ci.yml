@@ -15,8 +15,8 @@ jobs:
       - name: Checkout coderepo
         uses: actions/checkout@v4
         with:
-          repository: sschlosser7/repo-A
-          ref: main                   
+          repository: sschlosser7/coderepo
+          ref: develop                   
           path: coderepo                    
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  
 
