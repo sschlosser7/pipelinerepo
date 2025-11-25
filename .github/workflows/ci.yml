@@ -18,7 +18,7 @@ jobs:
           repository: sschlosser7/coderepo
           ref: main                   
           path: coderepo                    
-          token: ${{ secrets.PIPELINE_REPO_SECRET }}  
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN_PIPELINEREPO }}  
 
       - name: Run sample.py
         run: |
