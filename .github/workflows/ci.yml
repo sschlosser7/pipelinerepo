@@ -1,0 +1,18 @@
+name: CI Build
+
+on:
+  repository_dispatch:
+    types: [run-ci]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout pipeline repo
+        uses: actions/checkout@v4
+
+      - name: Run pipeline logic
+        run: |
+          echo "Pipeline started from Repo A"
+          # Your build steps here
